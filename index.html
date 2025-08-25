@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Srajan - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              zinnwald: "#331C0E",
+              liverorg: "#67331E",
+              alloy: "#B9540C",
+              flavescent: "#FFF190",
+              ivory: "#FCFEF0",
+              deer: "#C38D5F",
+            },
+            keyframes: {
+              float: {
+                "0%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-8px)" },
+                "100%": { transform: "translateY(0)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: 0, transform: "translateY(12px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              float: "float 4s ease-in-out infinite",
+              fadeInUp: "fadeInUp 0.7s ease-out forwards",
+            },
+          },
+        },
+      };
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/a2d9d6b6c0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(90deg, #fff190, #b9540c);
+        transition: width 0.25s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body
+    class="antialiased bg-gradient-to-br from-zinnwald via-liverorg to-alloy text-ivory"
+  >
+    <header class="sticky top-0 z-50 backdrop-blur bg-[rgba(0,0,0,0.25)]">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#hero" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-full bg-flavescent flex items-center justify-center text-zinnwald font-bold"
+          >
+            S
+          </div>
+          <span class="hidden sm:inline font-semibold tarcking-wide"
+            >SRAJAN</span
+          >
+        </a>
+
+        <nav class="hidden md:flex gap-6 items-center text-sm">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#resume" class="nav-link">Resume</a>
+          <a href="#contact" class="nav-link">Conatct</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="nav-toggle"
+            class="p-2 rounded bg-[rgba(255,255,255,0.06)]"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="hidden px-6 pb-4">
+        <div class="flex flex-col gap-3">
+          <a href="#about" class="block">About</a>
+          <a href="#projects" class="block">Projects</a>
+          <a href="#skills" class="block">Skills</a>
+          <a href="#resume" class="block">Resume</a>
+          <a href="#contact" class="block">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="hero" class="min-h-[65vh] flex items-center">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h1
+            class="text-4xl sm:text-5xl font-extrabold leading-tight drop-shadow-md animate-fadeInUp"
+          >
+            Hi, I'm <span class="text-flavescent">Srajan</span> — Full-Stack
+            Developer in the making, with a passion for DevOps
+          </h1>
+          <p class="mt-4 text-lg text-ivory/90 max-w-xl">
+            I enjoy working across all levels of software development, from
+            building engaging front-end experiences to designing strong back-end
+            systems. My growing passion for DevOps drives me to explore how
+            development and operations can align for smoother deployment and
+            scalability. I continuously learn new tools and technologies to
+            bridge the gap between coding and infrastructure. My goal is to
+            become a well-rounded professional who delivers end-to-end solutions
+            while streamlining processes.
+          </p>
+          <div class="mt-6 flex gap-4">
+            <a
+              href="#projects"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-ivory text-zinnwald font-medium hover:scale-105 transition"
+              ><i class="fas fa-code"></i> See Projects</a
+            >
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-ivory/30 hover:bg-ivory/20 transition"
+              ><i class="fas fa-envelope"></i>Contact Me</a
+            >
+          </div>
+          <div class="mt-8 text-sm text-ivory/85">
+            <i class="fas fa-envelope"></i> srajan200417gmail.com
+          </div>
+        </div>
+        <div class="relative flex justify-center md:justify-end">
+          <div
+            class="w-72 h-72 sm:w-80 sm:h-80 rounded-2xl bg-gradient-to-br from-deer via-alloy to-liverorg shadow-2xl p-1 animate-float"
+          >
+            <img
+              src="WhatsApp Image 2025-08-20 at 23.48.30_3877f229.jpg"
+              alt="Srajan"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl fpnt-bold mb-6">
+          <i class="fas fa-user"></i>About
+        </h2>
+        <p class="bg-black/10 p-6 rounded-lg">
+          I'm <strong>Srajan</strong>, an Information Science and Engineering
+          student at HKBK College of Engineering with a passion for full-stack
+          development and DevOps. Alongside academics, I’ve gained leadership
+          and teamwork experience by representing Karnataka Scouts at the
+          National Integration Camp, serving as a Class Representative, and
+          coordinating college events. Growing up across Udupi, Dakshina
+          Kannada, and Shivamogga has strengthened my communication skills and
+          adaptability, while my curiosity keeps me exploring new technologies
+          and challenges to become a well-rounded professional.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bond mb-6">
+          <i class="fas fa-laptop-code"></i>Projects
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-black/10 p-6 rounded-lg hover:scale-[1.02] transition">
+            <h3 class="font-semibold">Criket Performance prediction</h3>
+            <p class="mt-2 text-sm">
+              Python tool analyzing IPL datasets to score players.
+            </p>
+            <a
+              href="https://github.com/Srajan-fact/ShadowFox"
+              target="_blank"
+              class="mt-4 inline-block px-4 py-2 rounded bg-flavescent text-zinnwald font-medium"
+              ><i class="fab fa-github"></i>Repo</a
+            >
+          </div>
+          <div class="bg-black/10 p-6 rounded-lg hover:scale-[1.02] transition">
+            <h3 class="font-semibold">ClimaCast-Real-Time Weather App</h3>
+            <p class="mt-2 text-sm">
+              Responsive weather app with real-time data, dynamic themes, city
+              search, and location detection.
+            </p>
+            <a
+              href="https://github.com/Srajan-fact/Weather-App"
+              target="_blank"
+              class="mt-4 inline-block px-4 py-2 rounded bg-flavescent text-zinnwald font-medium"
+              ><i class="fab fa-github"></i>Repo</a
+            >
+          </div>
+          <div class="bg-black/10 p-6 rounded-lg hover:scale-[1.02] transition">
+            <h3 class="font-semibold">
+              Harmonia – Interactive Music Player Web App
+            </h3>
+            <p class="mt-2 text-sm">
+              Modern responsive music player app with playlists, album art,
+              real-time tracking, and interactive controls.
+            </p>
+            <a
+              href="https://github.com/Srajan-fact/Weather-App"
+              target="_blank"
+              class="mt-4 inline-block px-4 py-2 rounded bg-flavescent text-zinnwald font-medium"
+              ><i class="fab fa-github"></i>Repo</a
+            >
+          </div>
+          <div class="bg-black/10 p-6 rounded-lg hover:scale-[1.02] transition">
+            <h3 class="font-semibold">X-O Battle Arena Website</h3>
+            <p class="mt-2 text-sm">
+              Web-based Tic-Tac-Toe game with AI/player modes, win detection,
+              status updates, and reset option.
+            </p>
+            <a
+              href="https://github.com/Srajan-fact/Ti-Tac-Toe"
+              target="_blank"
+              class="mt-4 inline-block px-4 py-2 rounded bg-flavescent text-zinnwald font-medium"
+              ><i class="fab fa-github"></i>Repo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-16 bg-black/10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">
+          <i class="fas fa-tools"></i> Skills
+        </h2>
+        <ul class="grid md:grid-cols-3 gap-4">
+          <li class="bg-black/10 p-4 rounded">
+            <h1 class="bold">Languages</h1>
+            Python, c, Java
+          </li>
+          <li class="bg-black/10 p-4 rounded">
+            <h1 class="bold">Interface</h1>
+            HTML, CSS, Tailwind
+          </li>
+          <li class="bg-black/10 p-4 rounded">
+            <h1 class="bold">Database</h1>
+            SQL
+          </li>
+          <li class="bg-black/10 p-4 rounded">
+            <h1 class="bold">Tools</h1>
+            VS code, MySQL, Jupyter Notebook.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="resume" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">
+          <i class="fas fa-file-alt"></i>Resume
+        </h2>
+        <a
+          href="Srajan-resume.pdf"
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-flavescent text-zinnwald font-medium"
+          ><i class="fas fa-download"></i> Download PDF</a
+        >
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-black/10">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">
+          <i class="fas fa-paper-plane"></i> Contact
+        </h2>
+
+        <form
+          id="contact-form"
+          class="grid md:grid-cols-2 gap-4"
+          action="https://formspree.io/f/mldwerpz"
+          method="POST"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            class="p-3 rounded bg-black/20"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email"
+            class="p-3 rounded bg-black/20"
+            required
+          />
+
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="5"
+            class="p-3 rounded bg-black/20 md:col-span-2"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="md:col-span-2 px-5 py-3 rounded bg-flavescent text-zinnwald font-medium"
+          >
+            <i class="fas fa-paper-plane"></i> Send
+          </button>
+        </form>
+
+        <p
+          id="form-status"
+          class="text-center mt-4 text-lg font-medium hidden"
+        ></p>
+
+        <div class="mt-6 flex gap-4 text-xl">
+          <a href="mailto:srajan200417@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="https://github.com/Srajan-fact" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/srajan-b02471358" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-sm text-ivory/70">
+      <h1>Passion for development , drive for innovation.</h1>
+    </footer>
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { Accept: "application/json" },
+          });
+
+          if (response.ok) {
+            status.innerHTML =
+              "<span class='text-white font-bold'>Thanks for your message!</span>";
+            status.classList.remove("hidden", "text-red-500");
+            status.classList.add("text-green-500");
+            form.reset();
+          } else {
+            status.innerHTML =
+              "<span class='text-white font-bold'>Oops! Something went wrong , The message is not sent.</span>";
+            status.classList.remove("hidden", "text-green-500");
+            status.classList.add("text-red-500");
+          }
+        } catch (error) {
+          status.innerHTML =
+            "<span class='text-white font-bold'>Oops! Something went wrong , The message is not sent.</span>";
+          status.classList.remove("hidden", "text-green-500");
+          status.classList.add("text-red-500");
+        }
+
+        setTimeout(() => {
+          status.classList.add("hidden");
+        }, 4000);
+      });
+    </script>
+  </body>
+</html>
